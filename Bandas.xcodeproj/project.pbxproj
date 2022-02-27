@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B759B1AC27C6927600BC76EE /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759B1AB27C6927600BC76EE /* AlbumDTO.swift */; };
+		B759B1AE27C6928A00BC76EE /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759B1AD27C6928A00BC76EE /* Album.swift */; };
+		B781847327C3F8E800C4029D /* SaveBandUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781847227C3F8E800C4029D /* SaveBandUseCase.swift */; };
+		B781847527C4113500C4029D /* DeleteAllBandsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781847427C4113500C4029D /* DeleteAllBandsUseCase.swift */; };
+		B781847727C41C8B00C4029D /* DeleteBandsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781847627C41C8B00C4029D /* DeleteBandsUseCase.swift */; };
+		B791FD1927C14C1B00E707C3 /* GetAllBandsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791FD1827C14C1B00E707C3 /* GetAllBandsUseCase.swift */; };
+		B791FD1C27C14C8700E707C3 /* BandsRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791FD1B27C14C8700E707C3 /* BandsRespository.swift */; };
+		B791FD1F27C14CD100E707C3 /* BandLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791FD1E27C14CD100E707C3 /* BandLocalDataSource.swift */; };
+		B791FD2227C15B4D00E707C3 /* BandDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791FD2127C15B4D00E707C3 /* BandDTO.swift */; };
+		B791FD2427C15B8F00E707C3 /* ArtistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791FD2327C15B8F00E707C3 /* ArtistDTO.swift */; };
+		B7BF05F527BFA4BB00094426 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05F427BFA4BB00094426 /* Tests_iOS.swift */; };
+		B7BF05F727BFA4BB00094426 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05F627BFA4BB00094426 /* Tests_iOSLaunchTests.swift */; };
+		B7BF060127BFA4BB00094426 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF060027BFA4BB00094426 /* Tests_macOS.swift */; };
+		B7BF060327BFA4BB00094426 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF060227BFA4BB00094426 /* Tests_macOSLaunchTests.swift */; };
+		B7BF060427BFA4BB00094426 /* Bandas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05D927BFA4BA00094426 /* Bandas.xcdatamodeld */; };
+		B7BF060527BFA4BB00094426 /* Bandas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05D927BFA4BA00094426 /* Bandas.xcdatamodeld */; };
+		B7BF060627BFA4BB00094426 /* BandasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05DB27BFA4BA00094426 /* BandasApp.swift */; };
+		B7BF060727BFA4BB00094426 /* BandasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05DB27BFA4BA00094426 /* BandasApp.swift */; };
+		B7BF060827BFA4BB00094426 /* BandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05DC27BFA4BA00094426 /* BandsView.swift */; };
+		B7BF060927BFA4BB00094426 /* BandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05DC27BFA4BA00094426 /* BandsView.swift */; };
+		B7BF060A27BFA4BB00094426 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05DD27BFA4BA00094426 /* Persistence.swift */; };
+		B7BF060B27BFA4BB00094426 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF05DD27BFA4BA00094426 /* Persistence.swift */; };
+		B7BF062027BFA74D00094426 /* BandsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF061F27BFA74D00094426 /* BandsViewModel.swift */; };
+		B7BF062727BFBDBD00094426 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF062627BFBDBD00094426 /* Artist.swift */; };
+		B7BF062A27BFBF8200094426 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BF062927BFBF8200094426 /* Band.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7BF05F127BFA4BB00094426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7BF05D427BFA4BA00094426 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7BF05E227BFA4BB00094426;
+			remoteInfo = "Bandas (iOS)";
+		};
+		B7BF05FD27BFA4BB00094426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7BF05D427BFA4BA00094426 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7BF05E827BFA4BB00094426;
+			remoteInfo = "Bandas (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B759B1AB27C6927600BC76EE /* AlbumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDTO.swift; sourceTree = "<group>"; };
+		B759B1AD27C6928A00BC76EE /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		B781847227C3F8E800C4029D /* SaveBandUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBandUseCase.swift; sourceTree = "<group>"; };
+		B781847427C4113500C4029D /* DeleteAllBandsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllBandsUseCase.swift; sourceTree = "<group>"; };
+		B781847627C41C8B00C4029D /* DeleteBandsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteBandsUseCase.swift; sourceTree = "<group>"; };
+		B791FD1827C14C1B00E707C3 /* GetAllBandsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllBandsUseCase.swift; sourceTree = "<group>"; };
+		B791FD1B27C14C8700E707C3 /* BandsRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsRespository.swift; sourceTree = "<group>"; };
+		B791FD1E27C14CD100E707C3 /* BandLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandLocalDataSource.swift; sourceTree = "<group>"; };
+		B791FD2127C15B4D00E707C3 /* BandDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandDTO.swift; sourceTree = "<group>"; };
+		B791FD2327C15B8F00E707C3 /* ArtistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDTO.swift; sourceTree = "<group>"; };
+		B7BF05DA27BFA4BA00094426 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		B7BF05DB27BFA4BA00094426 /* BandasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandasApp.swift; sourceTree = "<group>"; };
+		B7BF05DC27BFA4BA00094426 /* BandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsView.swift; sourceTree = "<group>"; };
+		B7BF05DD27BFA4BA00094426 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B7BF05E327BFA4BB00094426 /* Bandas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7BF05E927BFA4BB00094426 /* Bandas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7BF05EB27BFA4BB00094426 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B7BF05F027BFA4BB00094426 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7BF05F427BFA4BB00094426 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		B7BF05F627BFA4BB00094426 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		B7BF05FC27BFA4BB00094426 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7BF060027BFA4BB00094426 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		B7BF060227BFA4BB00094426 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		B7BF061F27BFA74D00094426 /* BandsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsViewModel.swift; sourceTree = "<group>"; };
+		B7BF062627BFBDBD00094426 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		B7BF062927BFBF8200094426 /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7BF05E027BFA4BB00094426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05E627BFA4BB00094426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05ED27BFA4BB00094426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05F927BFA4BB00094426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B759B1AF27C6B12F00BC76EE /* BandsUseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B791FD1827C14C1B00E707C3 /* GetAllBandsUseCase.swift */,
+				B781847427C4113500C4029D /* DeleteAllBandsUseCase.swift */,
+				B781847627C41C8B00C4029D /* DeleteBandsUseCase.swift */,
+				B781847227C3F8E800C4029D /* SaveBandUseCase.swift */,
+			);
+			path = BandsUseCases;
+			sourceTree = "<group>";
+		};
+		B759B1B527C6BD3200BC76EE /* BandsRespositories */ = {
+			isa = PBXGroup;
+			children = (
+				B791FD1B27C14C8700E707C3 /* BandsRespository.swift */,
+			);
+			path = BandsRespositories;
+			sourceTree = "<group>";
+		};
+		B759B1B927C6BEC400BC76EE /* BandDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B791FD1E27C14CD100E707C3 /* BandLocalDataSource.swift */,
+			);
+			path = BandDataSources;
+			sourceTree = "<group>";
+		};
+		B791FD1A27C14C7200E707C3 /* Respositories */ = {
+			isa = PBXGroup;
+			children = (
+				B759B1B527C6BD3200BC76EE /* BandsRespositories */,
+			);
+			path = Respositories;
+			sourceTree = "<group>";
+		};
+		B791FD1D27C14C9B00E707C3 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B759B1B927C6BEC400BC76EE /* BandDataSources */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		B791FD2027C14CDA00E707C3 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				B791FD2127C15B4D00E707C3 /* BandDTO.swift */,
+				B791FD2327C15B8F00E707C3 /* ArtistDTO.swift */,
+				B759B1AB27C6927600BC76EE /* AlbumDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		B7BF05D327BFA4BA00094426 = {
+			isa = PBXGroup;
+			children = (
+				B7BF05D827BFA4BA00094426 /* Shared */,
+				B7BF05EA27BFA4BB00094426 /* macOS */,
+				B7BF05F327BFA4BB00094426 /* Tests iOS */,
+				B7BF05FF27BFA4BB00094426 /* Tests macOS */,
+				B7BF05E427BFA4BB00094426 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7BF05D827BFA4BA00094426 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF061C27BFA68000094426 /* Presentation */,
+				B7BF062227BFA7FE00094426 /* Domain */,
+				B7BF062127BFA7EE00094426 /* Data */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B7BF05E427BFA4BB00094426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF05E327BFA4BB00094426 /* Bandas.app */,
+				B7BF05E927BFA4BB00094426 /* Bandas.app */,
+				B7BF05F027BFA4BB00094426 /* Tests iOS.xctest */,
+				B7BF05FC27BFA4BB00094426 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7BF05EA27BFA4BB00094426 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF05EB27BFA4BB00094426 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		B7BF05F327BFA4BB00094426 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF05F427BFA4BB00094426 /* Tests_iOS.swift */,
+				B7BF05F627BFA4BB00094426 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		B7BF05FF27BFA4BB00094426 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF060027BFA4BB00094426 /* Tests_macOS.swift */,
+				B7BF060227BFA4BB00094426 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		B7BF061C27BFA68000094426 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF061D27BFA71A00094426 /* Views */,
+				B7BF061E27BFA72A00094426 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B7BF061D27BFA71A00094426 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF05DB27BFA4BA00094426 /* BandasApp.swift */,
+				B7BF05DC27BFA4BA00094426 /* BandsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7BF061E27BFA72A00094426 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF061F27BFA74D00094426 /* BandsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7BF062127BFA7EE00094426 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B791FD1A27C14C7200E707C3 /* Respositories */,
+				B791FD1D27C14C9B00E707C3 /* DataSources */,
+				B7BF062527BFA8D000094426 /* CoreData */,
+				B791FD2027C14CDA00E707C3 /* DTOs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B7BF062227BFA7FE00094426 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF062327BFA82A00094426 /* Models */,
+				B7BF062427BFA83500094426 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B7BF062327BFA82A00094426 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF062627BFBDBD00094426 /* Artist.swift */,
+				B7BF062927BFBF8200094426 /* Band.swift */,
+				B759B1AD27C6928A00BC76EE /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7BF062427BFA83500094426 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B759B1AF27C6B12F00BC76EE /* BandsUseCases */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B7BF062527BFA8D000094426 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B7BF05DD27BFA4BA00094426 /* Persistence.swift */,
+				B7BF05D927BFA4BA00094426 /* Bandas.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7BF05E227BFA4BB00094426 /* Bandas (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7BF061027BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Bandas (iOS)" */;
+			buildPhases = (
+				B7BF05DF27BFA4BB00094426 /* Sources */,
+				B7BF05E027BFA4BB00094426 /* Frameworks */,
+				B7BF05E127BFA4BB00094426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bandas (iOS)";
+			productName = "Bandas (iOS)";
+			productReference = B7BF05E327BFA4BB00094426 /* Bandas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7BF05E827BFA4BB00094426 /* Bandas (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7BF061327BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Bandas (macOS)" */;
+			buildPhases = (
+				B7BF05E527BFA4BB00094426 /* Sources */,
+				B7BF05E627BFA4BB00094426 /* Frameworks */,
+				B7BF05E727BFA4BB00094426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bandas (macOS)";
+			productName = "Bandas (macOS)";
+			productReference = B7BF05E927BFA4BB00094426 /* Bandas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7BF05EF27BFA4BB00094426 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7BF061627BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				B7BF05EC27BFA4BB00094426 /* Sources */,
+				B7BF05ED27BFA4BB00094426 /* Frameworks */,
+				B7BF05EE27BFA4BB00094426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7BF05F227BFA4BB00094426 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = B7BF05F027BFA4BB00094426 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B7BF05FB27BFA4BB00094426 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7BF061927BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				B7BF05F827BFA4BB00094426 /* Sources */,
+				B7BF05F927BFA4BB00094426 /* Frameworks */,
+				B7BF05FA27BFA4BB00094426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7BF05FE27BFA4BB00094426 /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = B7BF05FC27BFA4BB00094426 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7BF05D427BFA4BA00094426 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					B7BF05E227BFA4BB00094426 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					B7BF05E827BFA4BB00094426 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					B7BF05EF27BFA4BB00094426 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = B7BF05E227BFA4BB00094426;
+					};
+					B7BF05FB27BFA4BB00094426 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = B7BF05E827BFA4BB00094426;
+					};
+				};
+			};
+			buildConfigurationList = B7BF05D727BFA4BA00094426 /* Build configuration list for PBXProject "Bandas" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7BF05D327BFA4BA00094426;
+			productRefGroup = B7BF05E427BFA4BB00094426 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7BF05E227BFA4BB00094426 /* Bandas (iOS) */,
+				B7BF05E827BFA4BB00094426 /* Bandas (macOS) */,
+				B7BF05EF27BFA4BB00094426 /* Tests iOS */,
+				B7BF05FB27BFA4BB00094426 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7BF05E127BFA4BB00094426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05E727BFA4BB00094426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05EE27BFA4BB00094426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05FA27BFA4BB00094426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7BF05DF27BFA4BB00094426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B781847727C41C8B00C4029D /* DeleteBandsUseCase.swift in Sources */,
+				B759B1AC27C6927600BC76EE /* AlbumDTO.swift in Sources */,
+				B791FD2227C15B4D00E707C3 /* BandDTO.swift in Sources */,
+				B791FD1F27C14CD100E707C3 /* BandLocalDataSource.swift in Sources */,
+				B7BF060627BFA4BB00094426 /* BandasApp.swift in Sources */,
+				B7BF060A27BFA4BB00094426 /* Persistence.swift in Sources */,
+				B791FD2427C15B8F00E707C3 /* ArtistDTO.swift in Sources */,
+				B7BF062727BFBDBD00094426 /* Artist.swift in Sources */,
+				B791FD1C27C14C8700E707C3 /* BandsRespository.swift in Sources */,
+				B7BF060427BFA4BB00094426 /* Bandas.xcdatamodeld in Sources */,
+				B781847327C3F8E800C4029D /* SaveBandUseCase.swift in Sources */,
+				B759B1AE27C6928A00BC76EE /* Album.swift in Sources */,
+				B7BF060827BFA4BB00094426 /* BandsView.swift in Sources */,
+				B791FD1927C14C1B00E707C3 /* GetAllBandsUseCase.swift in Sources */,
+				B7BF062027BFA74D00094426 /* BandsViewModel.swift in Sources */,
+				B7BF062A27BFBF8200094426 /* Band.swift in Sources */,
+				B781847527C4113500C4029D /* DeleteAllBandsUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05E527BFA4BB00094426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7BF060727BFA4BB00094426 /* BandasApp.swift in Sources */,
+				B7BF060B27BFA4BB00094426 /* Persistence.swift in Sources */,
+				B7BF060527BFA4BB00094426 /* Bandas.xcdatamodeld in Sources */,
+				B7BF060927BFA4BB00094426 /* BandsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05EC27BFA4BB00094426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7BF05F727BFA4BB00094426 /* Tests_iOSLaunchTests.swift in Sources */,
+				B7BF05F527BFA4BB00094426 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7BF05F827BFA4BB00094426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7BF060327BFA4BB00094426 /* Tests_macOSLaunchTests.swift in Sources */,
+				B7BF060127BFA4BB00094426 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7BF05F227BFA4BB00094426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7BF05E227BFA4BB00094426 /* Bandas (iOS) */;
+			targetProxy = B7BF05F127BFA4BB00094426 /* PBXContainerItemProxy */;
+		};
+		B7BF05FE27BFA4BB00094426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7BF05E827BFA4BB00094426 /* Bandas (macOS) */;
+			targetProxy = B7BF05FD27BFA4BB00094426 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B7BF060E27BFA4BB00094426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7BF060F27BFA4BB00094426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B7BF061127BFA4BB00094426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = manuelmor00051.Bandas;
+				PRODUCT_NAME = Bandas;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7BF061227BFA4BB00094426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = manuelmor00051.Bandas;
+				PRODUCT_NAME = Bandas;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7BF061427BFA4BB00094426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = manuelmor00051.Bandas;
+				PRODUCT_NAME = Bandas;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B7BF061527BFA4BB00094426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = manuelmor00051.Bandas;
+				PRODUCT_NAME = Bandas;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B7BF061727BFA4BB00094426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "manuelmor00051.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bandas (iOS)";
+			};
+			name = Debug;
+		};
+		B7BF061827BFA4BB00094426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "manuelmor00051.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bandas (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7BF061A27BFA4BB00094426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "manuelmor00051.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Bandas (macOS)";
+			};
+			name = Debug;
+		};
+		B7BF061B27BFA4BB00094426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969M668MA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "manuelmor00051.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Bandas (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7BF05D727BFA4BA00094426 /* Build configuration list for PBXProject "Bandas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7BF060E27BFA4BB00094426 /* Debug */,
+				B7BF060F27BFA4BB00094426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7BF061027BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Bandas (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7BF061127BFA4BB00094426 /* Debug */,
+				B7BF061227BFA4BB00094426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7BF061327BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Bandas (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7BF061427BFA4BB00094426 /* Debug */,
+				B7BF061527BFA4BB00094426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7BF061627BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7BF061727BFA4BB00094426 /* Debug */,
+				B7BF061827BFA4BB00094426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7BF061927BFA4BB00094426 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7BF061A27BFA4BB00094426 /* Debug */,
+				B7BF061B27BFA4BB00094426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B7BF05D927BFA4BA00094426 /* Bandas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B7BF05DA27BFA4BA00094426 /* Shared.xcdatamodel */,
+			);
+			currentVersion = B7BF05DA27BFA4BA00094426 /* Shared.xcdatamodel */;
+			path = Bandas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B7BF05D427BFA4BA00094426 /* Project object */;
+}
